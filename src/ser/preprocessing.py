@@ -10,7 +10,7 @@ import librosa
 import numpy as np
 from scipy.signal import lfilter
 
-from config import logger
+from ser.config import logger
 
 
 def preprocess_audio_file(audio_path, sample_rate=16000, preemphasis_alpha=0.97, min_length=1600):

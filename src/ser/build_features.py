@@ -4,9 +4,9 @@ from typing import Dict, List
 import numpy as np
 from tqdm import tqdm
 
-from config import logger
-from src.extract_features import extract_mfcc_features, extract_mfcct_features
-from src.preprocessing import preprocess_audio_file
+from ser.config import logger
+from ser.extract_features import extract_mfcc_features, extract_mfcct_features
+from ser.preprocessing import preprocess_audio_file
 
 
 def pad_to_consistent_shape(arr: np.ndarray, target_shape: tuple) -> np.ndarray:

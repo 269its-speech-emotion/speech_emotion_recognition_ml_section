@@ -11,8 +11,8 @@ from keras import models
 from typing import Tuple
 import numpy as np
 
-
-from src.models.models_architectures import cnn_1d_model
+from ser.models.models_architectures import cnn_1d_model
+from ser.constants import EMOTION_LABELS
 
 def prepare_and_split_data(data: dict, feature_type: str = 'mfcc', val_size: float = 0.2, test_size: float = 0.1) \
         -> Tuple[np.array, np.array, np.array, np.array, np.array, np.array]:
@@ -37,7 +37,7 @@ def prepare_and_split_data(data: dict, feature_type: str = 'mfcc', val_size: flo
     labels_numeric = np.array([label_to_index[label] for label in labels])
 
     # One-hot encode the labels
-    num_classes = len(unique_labels)
+    num_classes = len(EMOTION_LABELS)
     labels_encoded = utils.to_categorical(labels_numeric, num_classes)
 
     # Reshape the features for compatibility with CNN models

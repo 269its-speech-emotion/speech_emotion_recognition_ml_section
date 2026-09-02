@@ -2,8 +2,8 @@ import numpy as np
 from from_root import from_root
 from sklearn.model_selection import train_test_split
 
-from build_features import build_features, prepare_features_for_cnn
-from config import logger
+from ser.build_features import build_features, prepare_features_for_cnn
+from ser.config import logger
 
 ORGANIZED_DATASET_FOLDER = from_root('data', 'ravdess_organized')
 
